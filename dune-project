@@ -1,5 +1,6 @@
 (lang dune 3.14)
 (name sitemap)
+(authors "Anil Madhavapeddy <anil@recoil.org>")
 (maintainers "Anil Madhavapeddy <anil@recoil.org>")
 (source (github avsm/ocaml-sitemap))
 (package
