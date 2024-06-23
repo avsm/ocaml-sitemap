@@ -1,0 +1,4 @@
+(library
+ (name sitemap)
+ (public_name sitemap)
+ (libraries xmlm))

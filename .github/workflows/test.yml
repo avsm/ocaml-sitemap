@@ -1,0 +1,28 @@
+name: Sitemap
+
+on:
+  pull_request:
+  push:
+  schedule:
+    - cron: 0 1 * * MON
+
+permissions: read-all
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        operating-system: [windows-latest, macos-latest, ubuntu-latest]
+        ocaml-compiler: [ '5.1.1', '4.14.2']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout tree
+        uses: actions/checkout@v4
+      - name: Set-up OCaml
+        uses: ocaml/setup-ocaml@v3.0.0-beta
+        with:
+          ocaml-compiler: ${{ matrix.ocaml-compiler }}
+      - run: opam install . --deps-only --with-test
+      - run: opam exec -- dune build
+      - run: opam exec -- dune runtest
