@@ -5,6 +5,7 @@ description:
   "This project is an OCaml tool to generate XML sitemaps, useful for SEO and search engines."
 maintainer: ["Anil Madhavapeddy <anil@recoil.org>"]
 authors: ["Anil Madhavapeddy <anil@recoil.org>"]
+license: "ISC"
 homepage: "https://github.com/avsm/ocaml-sitemap"
 bug-reports: "https://github.com/avsm/ocaml-sitemap/issues"
 depends: [

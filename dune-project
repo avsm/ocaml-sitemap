@@ -2,6 +2,7 @@
 (name sitemap)
 (authors "Anil Madhavapeddy <anil@recoil.org>")
 (maintainers "Anil Madhavapeddy <anil@recoil.org>")
+(license "ISC")
 (source (github avsm/ocaml-sitemap))
 (package
  (name sitemap)
